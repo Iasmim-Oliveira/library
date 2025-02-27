@@ -8,11 +8,16 @@ class BookModel extends Model
 {
     protected $fillable = [
         'id',
-        'titulo',
-        'autor',
-        'nota',
+        'title',
+        'author',
+        'score',
         'status',
-        'resumo',
-        'capa'
+        'summary',
+        'cover'
     ];
+
+    protected $dates = ['created_at', 'updated_at'];
+
+    //define um valor padrão para Status
+    protected $attributes = ['status' => 'reading'];
 }
