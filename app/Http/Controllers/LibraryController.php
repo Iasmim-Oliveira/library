@@ -15,7 +15,7 @@ class LibraryController extends Controller
     {
         $books = BookModel::all();
         $bookId = BookModel::find($request);
-        return view('library.index', compact('books', 'bookId'));
+        return view('index', compact('books', 'bookId'));
     }
 
     /**
